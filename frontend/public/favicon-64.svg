@@ -1,0 +1,35 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F3F4F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="32" cy="32" r="32" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle effects -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  
+  <!-- Letter D -->
+  <path d="M8 18 L8 46 L18 46 C26 46 30 42 30 32 C30 22 26 18 18 18 Z M13 23 L17 23 C21 23 23 24 23 32 C23 40 21 41 17 41 L13 41 Z" fill="url(#textGradient)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  
+  <!-- Letter R -->
+  <path d="M32 18 L32 46 M32 18 L40 18 C42 18 43 19 43 23 C43 27 42 28 40 28 L32 28 M39 28 L44 46" fill="none" stroke="url(#textGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Letter S -->
+  <path d="M48 25 C48 22 49 20 52 20 C55 20 56 22 56 25 M56 25 C56 27 55 28 52 29 L50 30 C48 31 47 32 47 36 C47 39 48 41 52 41 C56 41 57 39 57 36" fill="none" stroke="url(#textGradient)" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="8" cy="8" r="1.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="56" cy="56" r="1.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="6" cy="58" r="1" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="58" cy="6" r="1" fill="rgba(255,255,255,0.4)"/>
+</svg>
