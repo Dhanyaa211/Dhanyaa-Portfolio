@@ -77,16 +77,6 @@ npm install
 
 2. Fill in your credentials in `.env`:
    ```env
-   PORT=3001
-   FRONTEND_URL=http://localhost:5173
-   
-   # Your MongoDB Atlas connection string
-   MONGODB_URI=mongodb+srv://portfoliouser:yourpassword@cluster0.xxxxx.mongodb.net/portfolio?retryWrites=true&w=majority
-   
-   # Your Gmail credentials
-   EMAIL_USER=your_email@gmail.com
-   EMAIL_APP_PASSWORD=your_16_char_app_password
-   NOTIFICATION_EMAIL=where_to_receive_notifications@gmail.com
    ```
 
 ### 5. Run the Server
