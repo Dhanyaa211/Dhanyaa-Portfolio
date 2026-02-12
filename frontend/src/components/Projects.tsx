@@ -17,6 +17,7 @@ export default function Projects() {
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
       github: 'https://github.com/Dhanyaa211/Weather-App-Updated',
       demo: 'https://example.com',
+    
     },
     {
       title: 'IT Support Performance Analytics',
