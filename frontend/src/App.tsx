@@ -61,7 +61,7 @@ function App() {
   // Admin access via secret key combination
   useEffect(() => {
     let keySequence: string[] = [];
-    const secretSequence = ['r', 'a', 'j', 'a']; // Type "raja" to access
+    const secretSequence = ['d', 'a', 'd', 'd', 'y']; // Type "daddy" to access
 
     const handleKeyPress = (e: KeyboardEvent) => {
       if (showAdmin) return; // Already in admin mode
