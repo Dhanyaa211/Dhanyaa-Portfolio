@@ -65,14 +65,7 @@ export default function Projects() {
                     >
                       <Github size={20} className="text-gray-900" />
                     </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors"
-                    >
-                      <ExternalLink size={20} className="text-gray-900" />
-                    </a>
+                    
                   </div>
                 </div>
               </div>
