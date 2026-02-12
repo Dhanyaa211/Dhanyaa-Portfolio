@@ -23,13 +23,20 @@ export default function ParticleBackground() {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = Math.max(window.innerHeight, document.body.scrollHeight);
+      // Keep canvas sized to the viewport only — huge canvases (page height)
+      // are expensive to allocate and paint and cause scroll jank.
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      if (ctx) ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(120, Math.floor((canvas.width * canvas.height) / 10000));
+      // Reduce particle count and scale with viewport area to avoid O(n^2)
+      const particleCount = Math.min(80, Math.floor((canvas.width * canvas.height) / 30000));
 
       // Professional color palette
       const colors = [
@@ -56,13 +63,14 @@ export default function ParticleBackground() {
     };
 
     const animate = () => {
+      const now = Date.now();
       ctx.fillStyle = 'rgba(2, 6, 23, 0.15)'; // Deep professional navy for fade effect
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesRef.current.forEach((particle, index) => {
-        // Update position with slight floating effect
+        // Update position with slight floating effect. Compute time once
         particle.x += particle.vx;
-        particle.y += particle.vy + Math.sin(Date.now() * 0.001 + particle.x * 0.01) * 0.1;
+        particle.y += particle.vy + Math.sin(now * 0.001 + particle.x * 0.01) * 0.06;
 
         // Wrap around screen
         if (particle.x < 0) particle.x = canvas.width;
@@ -81,24 +89,28 @@ export default function ParticleBackground() {
         ctx.fill();
         ctx.restore();
 
-        // Draw elegant connections to nearby particles
-        particlesRef.current.forEach((otherParticle, otherIndex) => {
-          if (index === otherIndex) return;
-
+        // Draw limited connections: avoid full O(n^2) checks by only
+        // checking a few nearby particles (next N in array). This is a
+        // pragmatic performance trade-off that keeps the visual while
+        // bounding CPU cost.
+        const maxNeighbors = 8;
+        for (let j = index + 1; j < Math.min(particlesRef.current.length, index + 1 + maxNeighbors); j++) {
+          const otherParticle = particlesRef.current[j];
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 140) {
-            const opacity = (140 - distance) / 140 * 0.15;
+          const distanceSq = dx * dx + dy * dy;
+          const maxDist = 120;
+          if (distanceSq < maxDist * maxDist) {
+            const distance = Math.sqrt(distanceSq);
+            const opacity = ((maxDist - distance) / maxDist) * 0.13;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `rgba(79, 172, 254, ${opacity})`;
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 0.6;
             ctx.stroke();
           }
-        });
+        }
       });
 
       animationFrameRef.current = requestAnimationFrame(animate);
@@ -113,20 +125,17 @@ export default function ParticleBackground() {
 
     // Handle resize
     const handleResize = () => {
+      // On resize, update canvas size and re-create particles to fit
+      // the new viewport. Resizing on scroll was causing frequent
+      // canvas reallocations and jank — remove that.
       resizeCanvas();
       createParticles();
     };
 
-    const handleScroll = () => {
-      resizeCanvas();
-    };
-
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
