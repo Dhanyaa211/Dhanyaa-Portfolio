@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Layers } from 'lucide-react';
+import { Github, Layers } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
