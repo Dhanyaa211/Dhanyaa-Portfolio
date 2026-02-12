@@ -6,9 +6,9 @@ export default function Projects() {
       title: 'Multimodal Recognition System',
       description: 'Advanced AI system that combines computer vision and natural language processing to recognize and analyze multiple data types including images, text, and audio for comprehensive understanding.',
       tags: ['Python', 'TensorFlow', 'OpenCV', 'NLP', 'Machine Learning'],
-      image: 'public/Projects/multimodal.jpg',
+      image: '/Projects/multimodal.jpg',
       github: 'https://github.com/Dhanyaa211/Multimodal/tree/main/Multimodal',
-      demo: 'https://example.com',
+      
     },
     {
       title: 'Weather Prediction App',
@@ -16,16 +16,15 @@ export default function Projects() {
       tags: ['Python', 'Scikit-learn', 'APIs', 'Data Visualization', 'Pandas'],
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600',
       github: 'https://github.com/Dhanyaa211/Weather-App-Updated',
-      demo: 'https://example.com',
     
     },
     {
       title: 'IT Support Performance Analytics',
       description: 'Comprehensive analytics platform that tracks and analyzes IT support team performance metrics, ticket resolution times, and customer satisfaction to optimize support operations.',
       tags: ['Data Analysis', 'Dashboard', 'SQL', 'Power BI', 'Performance Metrics'],
-      image: 'public/Projects/it_support.jpg',
+      image: '/Projects/it_support.jpg',
       github: 'https://github.com/Dhanyaa211/DV---Optimizing-IT-Support-Team-Performance-Using-Analytics-Supportlytics-',
-      demo: 'https://example.com',
+      
     },
   ];
 
@@ -52,6 +51,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='; }}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
