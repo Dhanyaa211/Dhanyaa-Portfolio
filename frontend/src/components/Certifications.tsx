@@ -8,7 +8,7 @@ export default function Certifications() {
     {
       title: 'AWS Cloud Quest: Cloud Practioner',
       organization: 'Amazon Web Services',
-      image: '/Certificates/cloud quest cloud practioner.pdf',
+      image: '/Certificates/cloud quest cloud practioner.jpg',
       issueDate: '7/6/2025',
       credentialId: '22972443-b1d4-43f0-9652-a32932530bfa',
       verificationUrl: 'https://www.credly.com/earner/earned/badge/22972443-b1d4-43f0-9652-a32932530bfa',
@@ -23,7 +23,7 @@ export default function Certifications() {
     {
       title: 'MongoDB Certified Associate Atlas Administrator',
       organization: 'MongoDB',
-      image: '/Certificates/MongoDBCertifiedAssociateAtlasAdministrator_Badge20250708-26-f0v31t.pdf',
+      image: '/Certificates/MongoDBCertifiedAssociateAtlasAdministrator_Badge20250708-26-f0v31t.jpg',
       issueDate: '7/8/2025',
       credentialId: '8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
       verificationUrl: 'https://www.credly.com/earner/earned/badge/8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
@@ -31,28 +31,28 @@ export default function Certifications() {
     {
       title: 'Getting Started with DevOps on AWS',
       organization: 'AWS',
-      image: '/Certificates/getting started with devops.pdf',
+      image: '/Certificates/getting started with devops.jpg',
       issueDate: '29/7/2025',
       credentialId: '6841744B3F27CF1B',
     },
     {
       title: 'Oracle Certified Foundations Associate',
       organization: 'Oracle',
-      image: '/Certificates/Oracle.pdf',
+      image: '/Certificates/Oracle.jpg',
       issueDate: '24/6/2025',
       credentialId: '101884794OCI25DCFA',
     },
     {
       title: 'JP Morgan SE Job Simulation',
       organization: 'Forage',
-      image: '/Certificates/JP Morgan SE Job Simulation.pdf',
+      image: '/Certificates/JP Morgan SE Job Simulation.jpg',
       issueDate: '4/12/2025',
       credentialId: 'QoigfRQJHkka2bHyn',
     },
     {
       title: 'Deloitte Data Analysis Job Simulation',
       organization: 'Forage',
-      image: '/Certificates/deloitte.pdf',
+      image: '/Certificates/deloitte.jpg',
       issueDate: '31/1/2025',
       credentialId: ' QoigfRQJHkka2bHyn',
     },
@@ -80,19 +80,11 @@ export default function Certifications() {
                 onClick={() => setSelectedCert(cert)}
               >
                 <div className="relative h-48 overflow-hidden bg-gray-800/50">
-                  {cert.image.endsWith('.png') || cert.image.endsWith('.jpg') || cert.image.endsWith('.jpeg') ? (
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <iframe
-                      src={cert.image}
-                      className="w-full h-full origin-center transform pointer-events-none"
-                      title={`${cert.title} Preview`}
-                    />
-                  )}
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-contain p-2"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="text-white text-sm font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">
                       View Certificate
@@ -134,21 +126,13 @@ export default function Certifications() {
                 <X size={24} className="text-white" />
               </button>
 
-              {/* Certificate PDF/Image viewer */}
+              {/* Certificate Image viewer */}
               <div className="p-6">
-                {selectedCert.image.endsWith('.png') || selectedCert.image.endsWith('.jpg') || selectedCert.image.endsWith('.jpeg') ? (
-                  <img
-                    src={selectedCert.image}
-                    alt={selectedCert.title}
-                    className="w-full h-auto max-h-[600px] object-contain rounded-xl mx-auto"
-                  />
-                ) : (
-                  <iframe
-                    src={selectedCert.image}
-                    className="w-full h-[400px] md:h-[600px] rounded-xl scale-90 origin-center"
-                    title={selectedCert.title}
-                  />
-                )}
+                <img
+                  src={selectedCert.image}
+                  alt={selectedCert.title}
+                  className="w-full h-auto max-h-[600px] object-contain rounded-xl mx-auto"
+                />
                 <div className="mt-4 text-center">
                   <a
                     href={selectedCert.image}
@@ -157,9 +141,7 @@ export default function Certifications() {
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <ExternalLink size={16} className="mr-2" />
-                    <span className="text-sm font-medium">
-                      {selectedCert.image.endsWith('.pdf') ? 'Open PDF in new tab' : 'Open image in new tab'}
-                    </span>
+                    <span className="text-sm font-medium">Open image in new tab</span>
                   </a>
                 </div>
               </div>
