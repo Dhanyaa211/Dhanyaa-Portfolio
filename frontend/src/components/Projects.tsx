@@ -30,7 +30,7 @@ export default function Projects() {
       title: 'Hushh-connect',
       description: 'campus-based collaboration platform that connects students through skills, requirements, and interests.',
       tags: ['Next.js 16', 'TypeScript', 'Collaboration', 'Platform'],
-      image: '/Projects/huss-connect.jpg',
+      image: '/Projects/huss_connect.jpg',
       github: 'https://github.com/Dhanyaa211/Hushh-connect',
       
     },
