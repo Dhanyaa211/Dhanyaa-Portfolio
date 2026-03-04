@@ -26,6 +26,14 @@ export default function Projects() {
       github: 'https://github.com/Dhanyaa211/DV---Optimizing-IT-Support-Team-Performance-Using-Analytics-Supportlytics-',
       
     },
+    {
+      title: 'Hushh-connect',
+      description: 'campus-based collaboration platform that connects students through skills, requirements, and interests.',
+      tags: ['Next.js 16', 'TypeScript', 'Collaboration', 'Platform'],
+      image: '/Projects/huss-connect.jpg',
+      github: 'https://github.com/Dhanyaa211/Hushh-connect',
+      
+    },
   ];
 
   return (
