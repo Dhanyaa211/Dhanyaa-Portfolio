@@ -21,6 +21,14 @@ export default function Certifications() {
       credentialId: '6841744B3F27CF1B',
     },
     {
+      title: 'AWS Cloud Quest: Generative AI Practioner',
+      organization: 'Amazon Web Services',
+      image: '/Certificates/genAI pract.jpg',
+      issueDate: '12/04/2026',
+      credentialId: 'aece7ae8-0810-45ba-81b1-cbc3c2235f82',
+      verificationUrl: 'https://www.credly.com/earner/earned/badge/aece7ae8-0810-45ba-81b1-cbc3c2235f82',
+    },
+    {
       title: 'MongoDB Certified Associate Atlas Administrator',
       organization: 'MongoDB',
       image: '/Certificates/MongoDBCertifiedAssociateAtlasAdministrator_Badge20250708-26-f0v31t.jpg',
