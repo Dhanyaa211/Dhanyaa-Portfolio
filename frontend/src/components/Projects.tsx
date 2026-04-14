@@ -27,11 +27,19 @@ export default function Projects() {
       
     },
     {
-      title: 'Hushh-connect',
+      title: 'Peer-connect',
       description: 'campus-based collaboration platform that connects students through skills, requirements, and interests.',
-      tags: ['Next.js 16', 'TypeScript', 'Collaboration', 'Platform'],
+      tags: ['Next.js 16', 'TypeScript', 'Collaboration'],
       image: '/Projects/huss_connect.jpg',
       github: 'https://github.com/Dhanyaa211/Hushh-connect',
+      
+    },
+    {
+      title: 'Park Space',
+      description: 'A smart parking solution that uses real-time data and machine learning to optimize parking space allocation and reduce congestion in urban areas.',
+      tags: ['Supabase', 'GPS Monitor', 'Tokenization'],
+      image: '/Projects/smart-parking-app.jpg',
+      github: 'https://github.com/Dhanyaa211/ParkSpace',
       
     },
   ];
