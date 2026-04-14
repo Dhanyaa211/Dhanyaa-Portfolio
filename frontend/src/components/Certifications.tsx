@@ -23,7 +23,7 @@ export default function Certifications() {
     {
       title: 'AWS Cloud Quest: Generative AI Practioner',
       organization: 'Amazon Web Services',
-      image: '/Certificates/genAI pract.jpg',
+      image: '/Certificates/geneAI pract.jpg',
       issueDate: '12/04/2026',
       credentialId: 'aece7ae8-0810-45ba-81b1-cbc3c2235f82',
       verificationUrl: 'https://www.credly.com/earner/earned/badge/aece7ae8-0810-45ba-81b1-cbc3c2235f82',
