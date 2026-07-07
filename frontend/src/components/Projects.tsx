@@ -44,7 +44,7 @@ export default function Projects() {
     },
     {
       title: 'Multi Source Candidate Data Transformer',
-      description: 'A smart parking solution that uses real-time data and machine learning to optimize parking space allocation and reduce congestion in urban areas.',
+      description: 'Converts recruiter CSV data and resumes into a single canonical candidate profile',
       tags: ['OCR', 'MCP Server', 'Data Parsing'],
       image: '/Projects/candidate_data_transformer.png',
       github: 'https://github.com/Dhanyaa211/Candidate-Data-Transformer',
