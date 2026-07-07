@@ -1,12 +1,12 @@
-import { Briefcase, Award, Mic, Code, Heart } from 'lucide-react';
+import { Briefcase, Award, Mic, Code, Globe } from 'lucide-react';
 
 export default function About() {
   const stats = [
     { icon: Briefcase, value: '3', label: 'Internships' },
     { icon: Award, value: '5+', label: 'Projects' },
     { icon: Mic, value: '50+', label: 'Stages' },
-    { icon: Code, value: '200+', label: 'LeetCode' },
-    { icon: Heart, value: '100%', label: 'Professionalism' },
+    { icon: Code, value: '300+', label: 'LeetCode' },
+    { icon: Globe, value: '5+', label: 'Global Cerifications' },
   ];
 
   return (
