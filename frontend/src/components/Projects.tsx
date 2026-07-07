@@ -42,6 +42,14 @@ export default function Projects() {
       github: 'https://github.com/Dhanyaa211/ParkSpace',
       
     },
+    {
+      title: 'Multi Source Candidate Data Transformer',
+      description: 'A smart parking solution that uses real-time data and machine learning to optimize parking space allocation and reduce congestion in urban areas.',
+      tags: ['OCR', 'MCP Server', 'Data Parsing'],
+      image: '/Projects/candidate_data_transformer.png',
+      github: 'https://github.com/Dhanyaa211/Candidate-Data-Transformer',
+      
+    },
   ];
 
   return (
