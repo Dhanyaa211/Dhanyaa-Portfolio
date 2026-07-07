@@ -6,12 +6,12 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: 'AWS Cloud Quest: Cloud Practioner',
-      organization: 'Amazon Web Services',
-      image: '/Certificates/cloud quest cloud practioner.jpg',
-      issueDate: '7/6/2025',
-      credentialId: '22972443-b1d4-43f0-9652-a32932530bfa',
-      verificationUrl: 'https://www.credly.com/earner/earned/badge/22972443-b1d4-43f0-9652-a32932530bfa',
+      title: 'MongoDB Certified Associate Atlas Administrator',
+      organization: 'MongoDB',
+      image: '/Certificates/MongoDBCertifiedAssociateAtlasAdministrator_Badge20250708-26-f0v31t.jpg',
+      issueDate: '7/8/2025',
+      credentialId: '8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
+      verificationUrl: 'https://www.credly.com/earner/earned/badge/8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
     },
     {
       title: 'Github Foundations Certification',
@@ -19,6 +19,21 @@ export default function Certifications() {
       image: '/Certificates/Github.png',
       issueDate: '7/12/2025',
       credentialId: '6841744B3F27CF1B',
+    },
+    {
+      title: 'Oracle Certified Foundations Associate',
+      organization: 'Oracle',
+      image: '/Certificates/Oracle.jpg',
+      issueDate: '24/6/2025',
+      credentialId: '101884794OCI25DCFA',
+    },
+    {
+      title: 'AWS Cloud Quest: Cloud Practioner',
+      organization: 'Amazon Web Services',
+      image: '/Certificates/cloud quest cloud practioner.jpg',
+      issueDate: '7/6/2025',
+      credentialId: '22972443-b1d4-43f0-9652-a32932530bfa',
+      verificationUrl: 'https://www.credly.com/earner/earned/badge/22972443-b1d4-43f0-9652-a32932530bfa',
     },
     {
       title: 'AWS Cloud Quest: Generative AI Practioner',
@@ -29,26 +44,11 @@ export default function Certifications() {
       verificationUrl: 'https://www.credly.com/earner/earned/badge/aece7ae8-0810-45ba-81b1-cbc3c2235f82',
     },
     {
-      title: 'MongoDB Certified Associate Atlas Administrator',
-      organization: 'MongoDB',
-      image: '/Certificates/MongoDBCertifiedAssociateAtlasAdministrator_Badge20250708-26-f0v31t.jpg',
-      issueDate: '7/8/2025',
-      credentialId: '8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
-      verificationUrl: 'https://www.credly.com/earner/earned/badge/8f0b3dbd-64fd-4c2f-873e-f3708393dcca',
-    },
-    {
       title: 'Getting Started with DevOps on AWS',
       organization: 'AWS',
       image: '/Certificates/getting started with devops.jpg',
       issueDate: '29/7/2025',
       credentialId: '6841744B3F27CF1B',
-    },
-    {
-      title: 'Oracle Certified Foundations Associate',
-      organization: 'Oracle',
-      image: '/Certificates/Oracle.jpg',
-      issueDate: '24/6/2025',
-      credentialId: '101884794OCI25DCFA',
     },
     {
       title: 'JP Morgan SE Job Simulation',
@@ -63,6 +63,13 @@ export default function Certifications() {
       image: '/Certificates/deloitte.jpg',
       issueDate: '31/1/2025',
       credentialId: ' QoigfRQJHkka2bHyn',
+    },
+    {
+      title: 'Tata Data Visualization Job Simulation',
+      organization: 'Forage',
+      image: '/Certificates/tata.png',
+      issueDate: '15/6/2026',
+      credentialId: 'C6NjMcYP2hjp7oXF5',
     },
   ];
 
