@@ -81,14 +81,6 @@ export default function Hero() {
           >
             <LeetcodeIcon size={24} />
           </a>
-          <a
-            href="https://demo.codolio.com/profile/Dhanyaars1126"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-glass rounded-full hover:bg-glass-dark hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:scale-110"
-          >
-            <CodolioIcon size={24} />
-          </a>
         </div>
       </div>
 
